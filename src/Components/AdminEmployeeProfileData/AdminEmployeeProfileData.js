@@ -1,11 +1,12 @@
 import axios from "axios";
 import React, { useContext, useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import UserContext from "../../UserContext";
 
 const AdminEmployeeProfileData = () => {
   const userContext = useContext(UserContext);
   const [userData, setUserData] = useState([]);
+  const navigate = useNavigate()
   useEffect(() => {
     async function fetchData() {
       let users = await axios.get(
@@ -16,11 +17,16 @@ const AdminEmployeeProfileData = () => {
     fetchData();
   }, []);
 
+  const dash = ()=>{
+    navigate('/dashboard');
+    window.location.reload()
+  }
+
   userContext.setSearchName(userData);
   return (
     <div className="card">
       <div className="card-header">
-        <h5 className="card-title text-center">Employee Database</h5>
+        <h5 className="card-title text-center">Employee Information</h5>
       </div>
 
       <div className="table-responsive">
@@ -62,6 +68,9 @@ const AdminEmployeeProfileData = () => {
                 })}
           </tbody>
         </table>
+        
+        <button onClick={dash}><i className="fa fa-arrow-left"></i></button>
+        
       </div>
     </div>
   );

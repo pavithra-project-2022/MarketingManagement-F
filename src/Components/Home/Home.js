@@ -29,12 +29,12 @@ const load = ()=>{
                     <div className="d-inline-block ms-4 d-xl-none">
                         <div className="mobile-nav-wrap">                    
                             <div id="hamburger">
-                                <i className="fal fa-bars"></i>
+                                <i className="fa fa-bars"></i>
                             </div>
                            
                             <div className="mobile-nav">
                                 <button type="button" className="close-nav">
-                                    <i className="fal fa-times-circle"></i>
+                                    <i className="fa fa-times-circle"></i>
                                 </button>
                                 <nav className="sidebar-nav">
                                     <ul className="metismenu" id="mobile-menu">

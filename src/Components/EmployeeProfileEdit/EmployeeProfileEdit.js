@@ -43,6 +43,11 @@ const [userData,setUserData] = useState([])
     }
   };
 
+  const dash = ()=>{
+    navigate('/dashboard')
+    window.location.reload()
+  }
+
   return (
     <div className="content">
     <div className="card">
@@ -181,6 +186,7 @@ const [userData,setUserData] = useState([])
             </div>
 
           </fieldset>
+         
 
           <div className="d-flex justify-content-end align-items-center">
             <button type="reset" className="btn btn-lg btn-light" id="reset">
@@ -193,6 +199,12 @@ const [userData,setUserData] = useState([])
             >
               Submit <i className="icon-paperplane ml-2"></i>
             </button>
+          </div>
+          <div className="d-flex justify-content-start align-items-center">
+            <button onClick={dash}>
+             <i className="fa fa-arrow-left"></i>
+            </button>
+           
           </div>
         </form>
         

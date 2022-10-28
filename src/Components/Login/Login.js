@@ -101,7 +101,7 @@ const Login = () => {
                 <div className="details">
                   <div className="logo-2">
                    <Link to='/login'> <a href="">
-                      <img src="assets/img/logos/logo-2.png" alt="logo" />
+                      <h1>MMS</h1>
                     </a></Link>
                   </div>
                   <h1>Welcome!</h1>

@@ -18,7 +18,7 @@ const Dashboard = () => {
     <>
       <div id="layout-k" className="theme-orange">
         <CommonDashboard />
-        <div className="main px-lg-4 px-1">
+        <div className="main px-lg-4 px-1" style={{marginTop:"80px"}}>
           <div className="body-header border-bottom d-flex py-3">
             <div className="container-fluid">
               <div className="row align-items-center">
@@ -41,7 +41,20 @@ const Dashboard = () => {
                   </>
                 ) : (
                   <>
-                    <AdminEmployeeProfileData />
+                     <div className="col">
+                      <small className="text-muted">Welcome to back.</small>
+                      <h1 className="h4 mt-1">Dashboard</h1>
+                    </div>
+
+                    <div className="col-auto">
+                      <button
+                        type="button"
+                        className="btn btn-lg btn-primary lift"
+                        onClick={() => navigate("/adminEmployeeProfileLayout")}
+                      >
+                        Employee Database
+                      </button>
+                    </div>
                   </>
                 )}
               </div>

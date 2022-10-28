@@ -6,7 +6,7 @@ import SettingModal from '../SettingModal/SettingModal'
 const EmployeeProfileEditComp = () => {
   return (
     <>
-    <div id="layout-k" className="theme-orange">
+    <div id="layout-k" className="theme-orange" style={{marginTop:"20px"}}>
      
       <CommonDashboard/>
 
