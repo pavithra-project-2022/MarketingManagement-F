@@ -50,7 +50,7 @@ console.log(allColumns[7])
       <div className="container">
         <div className="row clearfix">
           <div className="col-md-12">
-            <div className="card p-4 mb-4">
+            {/* <div className="card p-4 mb-4"> */}
            
               <GlobalFilter filter={globalFilter} setFilter={setGlobalFilter} />
               <br/>
@@ -195,7 +195,7 @@ console.log(allColumns[7])
                 </div>
                 {/* </div> */}
               </div>
-            </div>
+            {/* </div> */}
           </div>
         </div>
       </div>
