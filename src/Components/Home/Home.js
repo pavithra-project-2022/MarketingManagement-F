@@ -25,11 +25,11 @@ const load = ()=>{
                     </ul>
                 </div>
                 <div className="header-right-elements d-flex align-items-center justify-content-between">
-                    <Link to='/login'><a href="contact.html" className="theme-btn style-3 d-none d-sm-block">Login</a></Link>
+                    <Link to='/login'><a href="" className="theme-btn style-3 d-none d-sm-block">Login</a></Link>
                     <div className="d-inline-block ms-4 d-xl-none">
                         <div className="mobile-nav-wrap">                    
                             <div id="hamburger">
-                                <i className="fa fa-bars"></i>
+                            <Link to='/login'> <li><h4 style={{border:"2px solid white",padding:"10px"}}>Login</h4></li></Link>
                             </div>
                            
                             <div className="mobile-nav">

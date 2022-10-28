@@ -100,7 +100,7 @@ const Login = () => {
               <div className="login-inner-form">
                 <div className="details">
                   <div className="logo-2">
-                   <Link to='/login'> <a href="">
+                   <Link to='/'> <a href="">
                       <h1>MMS</h1>
                     </a></Link>
                   </div>

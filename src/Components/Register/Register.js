@@ -112,7 +112,7 @@ const Register = () => {
               <div className="login-inner-form">
                 <div className="details">
                   <div className="logo-2">
-                  <Link to='/login'> <h1>MMS</h1></Link>
+                  <Link to='/'> <h1>MMS</h1></Link>
                   </div>
                   <h1>Welcome!</h1>
                   <h3>Create An Account</h3>
