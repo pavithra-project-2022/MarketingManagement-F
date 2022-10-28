@@ -185,7 +185,7 @@ const Table = ({
                         : 0;
                       gotoPage(pageNumber);
                     }}
-                    style={{ width: "50px" }}
+                    style={{ width: "20px" }}
                   />
                 </span>
               </div>
