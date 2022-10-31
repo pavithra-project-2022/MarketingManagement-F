@@ -301,12 +301,13 @@
     width: auto;
   }
 }
-@media only screen and (max-width: 370px) {
+@media only screen and (max-width: 500px) {
   #layout-k .navigation .brand-icon {
     width: 20px;
     color: transparent;
   }
 }
+
 #layout-k .navigation > .navbar-nav .nav-link {
   color: #fff;
 }
