@@ -10,8 +10,8 @@ const AdminEmployeeProfileLayout = () => {
      
       <CommonDashboard/>
 
-      <div className="main px-lg-4 px-1">
-        <div className="body-header border-bottom d-flex py-3">
+      <div className="main px-lg-4 px-1"  >
+        <div className="body-header border-bottom d-flex" style={{position:"fixed"}}>
           <div className="container-fluid">
             <div className="row align-items-center">
               <AdminEmployeeProfileData/>

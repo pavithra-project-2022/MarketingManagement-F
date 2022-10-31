@@ -16,10 +16,10 @@ const Dashboard = () => {
 
   return (
     <>
-      <div id="layout-k" className="theme-orange" style={{marginTop:"25px",position:"sticky"}}>
+      <div id="layout-k" className="theme-orange" style={{marginTop:"25px"}}>
         <CommonDashboard />
         <div className="main px-lg-4 px-1" >
-          <div className="body-header border-bottom d-flex py-3">
+          <div className="body-header border-bottom d-flex py-3" style={{position:"fixed"}}>
             <div className="container-fluid">
               <div className="row align-items-center">
                 {user.details.role === "user" ? (
@@ -41,7 +41,7 @@ const Dashboard = () => {
                   </>
                 ) : (
                   <>
-                     <div className="col">
+                     <div className="col" >
                       <small className="text-muted">Welcome to back.</small>
                       <h1 className="h4 mt-1">Dashboard</h1>
                     </div>
