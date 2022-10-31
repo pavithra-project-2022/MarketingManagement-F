@@ -301,6 +301,12 @@
     width: auto;
   }
 }
+@media only screen and (max-width: 370px) {
+  #layout-k .navigation .brand-icon {
+    width: 20px;
+    color: transparent;
+  }
+}
 #layout-k .navigation > .navbar-nav .nav-link {
   color: #fff;
 }
@@ -587,7 +593,7 @@
   scroll-behavior: smooth;
   -ms-overflow-style: none;
   scrollbar-width: none;
-  background-color: var(--body-color);
+  background-color: white;
   height: calc(100vh - 70px);
   margin-top: 70px;
   margin-right: 1rem;

@@ -185,7 +185,7 @@ const Table = ({
                         : 0;
                       gotoPage(pageNumber);
                     }}
-                    style={{ width: "20px" }}
+                    style={{ width: "10px" }}
                   />
                 </span>
               </div>
@@ -194,24 +194,24 @@ const Table = ({
                 <button
                   onClick={() => gotoPage(0)}
                   disabled={!canPreviousPage}
-                  style={{ marginLeft: "50px" }}
+                  style={{ marginLeft: "10px" }}
                 >
                   {"<<"}
                 </button>
                 <button
                   onClick={() => previousPage()}
                   disabled={!canPreviousPage}
-                  style={{ marginLeft: "10px" }}
+                  style={{ marginLeft: "6px" }}
                 >
                   {"<"}
                 </button>
-                <button onClick={() => nextPage()} disabled={!canNextPage} style={{ marginLeft: "10px" }}>
+                <button onClick={() => nextPage()} disabled={!canNextPage} style={{ marginLeft: "6px" }}>
                   {">"}
                 </button>
                 <button
                   onClick={() => gotoPage(pageCount - 1)}
                   disabled={!canNextPage}
-                  style={{ marginLeft: "10px" }}
+                  style={{ marginLeft: "6px" }}
                 >
                   {">>"}
                 </button>

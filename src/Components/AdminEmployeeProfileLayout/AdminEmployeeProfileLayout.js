@@ -6,7 +6,7 @@ import SettingModal from '../SettingModal/SettingModal'
 const AdminEmployeeProfileLayout = () => {
   return (
     <>
-    <div id="layout-k" className="theme-orange" style={{marginTop:"20px"}}>
+    <div id="layout-k" className="theme-orange" style={{marginTop:"25px",position:"sticky"}}>
      
       <CommonDashboard/>
 

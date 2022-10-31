@@ -6,7 +6,7 @@ import SettingModal from '../SettingModal/SettingModal'
 const AdminEmployeeDCMDetails = () => {
   return (
     <>
-    <div id="layout-k" className="theme-orange" style={{marginTop:"30px"}}>
+    <div id="layout-k" className="theme-orange" style={{marginTop:"30px",position:"sticky"}}>
      
       <CommonDashboard/>
 

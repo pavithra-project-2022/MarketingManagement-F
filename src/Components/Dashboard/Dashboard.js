@@ -16,9 +16,9 @@ const Dashboard = () => {
 
   return (
     <>
-      <div id="layout-k" className="theme-orange">
+      <div id="layout-k" className="theme-orange" style={{marginTop:"25px",position:"sticky"}}>
         <CommonDashboard />
-        <div className="main px-lg-4 px-1" style={{marginTop:"80px"}}>
+        <div className="main px-lg-4 px-1" >
           <div className="body-header border-bottom d-flex py-3">
             <div className="container-fluid">
               <div className="row align-items-center">
@@ -52,7 +52,7 @@ const Dashboard = () => {
                         className="btn btn-lg btn-primary lift"
                         onClick={() => navigate("/adminEmployeeProfileLayout")}
                       >
-                        Employee Database
+                        Employee Information
                       </button>
                     </div>
                   </>
