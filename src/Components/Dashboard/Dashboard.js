@@ -22,10 +22,11 @@ const Dashboard = () => {
           <div className="body-header border-bottom d-flex py-3" style={{position:"fixed"}}>
             <div className="container-fluid">
               <div className="row align-items-center">
+              
                 {user.details.role === "user" ? (
                   <>
-                    <div className="col">
-                      <small className="text-muted">Welcome to back.</small>
+                    <div className="col-6">
+                     
                       <h1 className="h4 mt-1">Dashboard</h1>
                     </div>
 
@@ -41,8 +42,9 @@ const Dashboard = () => {
                   </>
                 ) : (
                   <>
-                     <div className="col" >
-                      <small className="text-muted">Welcome to back.</small>
+                  
+                     <div className="col-6" >
+                     
                       <h1 className="h4 mt-1">Dashboard</h1>
                     </div>
 
