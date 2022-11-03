@@ -19,6 +19,7 @@ import AdminEmployeeDCMDetails from "./Components/AdminEmployeeDCMDetails/AdminE
 import AdminDCMEdit from "./Components/AdminDCMEdit/AdminDCMEdit";
 import EmployeeProfileEditComp from "./Components/EmployeeProfileEditComp/EmployeeProfileEditComp"
 import AdminEmployeeProfileLayout from "./Components/AdminEmployeeProfileLayout/AdminEmployeeProfileLayout";
+import EmployeeUsernameComp from "./Components/EmployeeUsernameComp/EmployeeUsernameComp";
 
 function App() {
   const { user } = useContext(AuthContext);
@@ -48,6 +49,8 @@ function App() {
             <Route path="/dashboardDataComp" element={<DashboardDataComp />} />  
 
             <Route path="/employeeProfileComp" element={<EmployeeProfileComp />} />  
+
+            <Route path="/employeeUsernameComp" element={<EmployeeUsernameComp />} />  
 
             <Route path="/employeeDcmDetailsComp" element={<EmployeeDCMDetailsComp />} />  
 

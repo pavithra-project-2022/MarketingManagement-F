@@ -12,6 +12,8 @@ import axios from "axios";
 const Login = () => {
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
+  const [mobile, setMobile] = useState("");
+  const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const { dispatch } = useContext(AuthContext);
 
@@ -30,6 +32,8 @@ const Login = () => {
     try {
       const res = await axios.post("https://mms-server.herokuapp.com/api/auth/login", {
         email,
+        mobile,
+        username,
         password,
       });
       dispatch(loginSuccess(res.data));
@@ -107,12 +111,13 @@ const Login = () => {
                   <h1>Welcome!</h1>
                   <h3>Sign Into Your Account</h3>
                   <form>
-                    <div className="form-group">
+                    <div className="row">
+                    <div className="form-group col-4">
                       <label
                         htmlFor="email"
                         className="form-label float-start"
                       >
-                        Email address
+                        Email/
                       </label>
                       <input
                         name="email"
@@ -123,6 +128,41 @@ const Login = () => {
                         placeholder="Email Address"
                         aria-label="Email Address"
                       />
+                      </div>
+                      <div className="form-group col-4">
+                      <label
+                        htmlFor="mobile"
+                        className="form-label float-start"
+                      >
+                        Mobile/
+                      </label>
+                       <input
+                        name="mobile"
+                        type="text"
+                        className="form-control"
+                        id="mobile"
+                        onChange={(e) => setMobile(e.target.value)}
+                        placeholder="Mobile No"
+                        aria-label="Mobile No"
+                      />
+                    </div> 
+                    <div className="form-group col-4">
+                      <label
+                        htmlFor="username"
+                        className="form-label float-start"
+                     >
+                      Username
+                      </label>
+                       <input
+                        name="username"
+                        type="text"
+                        className="form-control"
+                        id="username"
+                        onChange={(e) => setUsername(e.target.value)}
+                        placeholder="Username"
+                        aria-label="Username"
+                      />
+                    </div> 
                     </div>
                     <div className="form-group clearfix">
                       <label

@@ -262,6 +262,7 @@ const EmployeeProfile = () => {
           </form>
           
         </div>
+        <i className="fa fa-arrow-left" onClick={()=>navigate('/dashboard')}></i>
       </div>
     </div>
   );

@@ -98,6 +98,13 @@ const CommonDashboard = () => {
                     >
                       <span className=" me-2"></span>Profile
                     </a>
+                    <a
+                      href=""
+                      className="list-group-item"
+                      onClick={() => navigate("/employeeUsernameComp")}
+                    >
+                      <span className=" me-2"></span>Set Username
+                    </a>
 
                     <a
                       href=""
