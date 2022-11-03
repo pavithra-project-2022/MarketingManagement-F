@@ -2,9 +2,11 @@ import React, { useContext, useEffect, useState } from "react";
 import axios from "axios";
 import { AuthContext } from "../../authContext/AuthContext";
 import './style.css'
+import { useNavigate } from "react-router-dom";
 
 const EmployeeDCMDetails = () => {
   const { user } = useContext(AuthContext);
+  const navigate = useNavigate()
 
   const [userData, setUserData] = useState([]);
   useEffect(() => {
@@ -19,7 +21,7 @@ const EmployeeDCMDetails = () => {
 
   
   return (
-    
+    <>
     <div className="card">
       <div className="card-header">
         <h5 className="card-title text-center">Daily Customer Meet Details</h5>
@@ -57,7 +59,10 @@ const EmployeeDCMDetails = () => {
           </tbody>
         </table>
       </div>
+      
     </div>
+    <i className="fa fa-arrow-left" onClick={()=>navigate('/dashboard')}></i>
+    </>
   );
 };
 
