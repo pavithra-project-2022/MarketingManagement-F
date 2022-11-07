@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import axios from "axios";
+import"./styles.module.css";
 import success from "../../image/success.png";
 
 const EmailVerify = () => {
@@ -24,11 +25,11 @@ const EmailVerify = () => {
 
 	return (
 		
-				<div className="container">
-					<img src={success} alt="success_img" className="success_img" />
+				<div className={styles.container}>
+					<img src={success} alt="success_img" className={styles.success_img} />
 					<h1>Email verified successfully</h1>
 					<Link to="/login">
-						<button className="green_btn">Login</button>
+						<button className={styles.green_btn}>Login</button>
 					</Link>
 				</div>
 			
