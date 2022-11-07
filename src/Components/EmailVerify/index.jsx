@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import axios from "axios";
-import"./styles.module.css";
+import styles from "./styles.module.css";
+import { Fragment } from "../../../node_modules/react/cjs/react.production.min";
 import success from "../../image/success.png";
 
 const EmailVerify = () => {
@@ -24,7 +25,8 @@ const EmailVerify = () => {
 	}, [param]);
 
 	return (
-		
+		<Fragment>
+			{validUrl ? (
 				<div className={styles.container}>
 					<img src={success} alt="success_img" className={styles.success_img} />
 					<h1>Email verified successfully</h1>
@@ -32,7 +34,10 @@ const EmailVerify = () => {
 						<button className={styles.green_btn}>Login</button>
 					</Link>
 				</div>
-			
+			) : (
+				<h1>404 Not Found</h1>
+			)}
+		</Fragment>
 	);
 };
 
