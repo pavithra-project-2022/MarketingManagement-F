@@ -20,6 +20,7 @@ import AdminDCMEdit from "./Components/AdminDCMEdit/AdminDCMEdit";
 import EmployeeProfileEditComp from "./Components/EmployeeProfileEditComp/EmployeeProfileEditComp"
 import AdminEmployeeProfileLayout from "./Components/AdminEmployeeProfileLayout/AdminEmployeeProfileLayout";
 import EmployeeUsernameComp from "./Components/EmployeeUsernameComp/EmployeeUsernameComp";
+import EmailVerify from "./Components/EmailVerify";
 
 function App() {
   const { user } = useContext(AuthContext);
@@ -35,9 +36,13 @@ function App() {
 
         <Route path="/register" element={<Register />} />
 
+        <Route path="/users/:id/verify/:token" element={<EmailVerify />} />
+
         <Route path="/forgotPassword" element={<ForgotPassword />} />
 
         <Route exact path="/" element={<Home />} />
+
+
 
         {user && (
           <>
