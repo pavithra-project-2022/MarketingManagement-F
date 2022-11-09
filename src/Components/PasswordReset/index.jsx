@@ -31,14 +31,10 @@ const PasswordReset = () => {
 			setError("");
 			window.location = "/login";
 		} catch (error) {
-			if (
-				error.response &&
-				error.response.status >= 400 &&
-				error.response.status <= 500
-			) {
+			
 				setError(error.response.data.message);
 				setMsg("");
-			}
+			
 		}
 	};
 
@@ -46,11 +42,12 @@ const PasswordReset = () => {
 		<Fragment>
 			{validUrl ? (
 				<div className={styles.container}>
+					
+					<form className={styles.form_container} onSubmit={handleSubmit}>
 					{error && <div className="error_msg" style={{background:"red",color:"white"}}>{error}</div>}
                       {msg && <div className="success_msg" style={{background:"green",color:"white"}}>{msg}</div>}
                 
-					<form className={styles.form_container} onSubmit={handleSubmit}>
-						<h1>Add New Password</h1>
+						<h3>Add New Password</h3>
 						<input
 							type="password"
 							placeholder="Password"
@@ -67,7 +64,7 @@ const PasswordReset = () => {
 					</form>
 				</div>
 			) : (
-				<h1>404 Not Found</h1>
+				""
 			)}
 		</Fragment>
 	);

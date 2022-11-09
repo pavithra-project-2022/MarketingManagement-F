@@ -6,6 +6,10 @@
 	justify-content: center;
 	flex-direction: column;
 }
+.success_img{
+	width: 200px;
+	height: 200px;
+}
 
 .green_btn {
 	border: none;

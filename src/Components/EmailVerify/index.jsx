@@ -32,7 +32,7 @@ return (
     <Fragment>
       <div className={styles.container}>
         <img src={success} alt="success_img" className={styles.success_img} />
-        <h1>Email verified successfully</h1>
+        <h3>Email verified successfully</h3>
         	<button className={styles.green_btn} onClick={load}>
           Login
         </button>
