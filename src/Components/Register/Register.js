@@ -116,6 +116,9 @@ const Register = () => {
                   </div>
                   <h1>Welcome!</h1>
                   <h3>Create An Account</h3>
+                  {error && <div className="error_msg" style={{background:"red",color:"white"}}>{error}</div>}
+                      {msg && <div className="success_msg" style={{background:"green",color:"white"}}>{msg}</div>}
+                
                   <form onSubmit={formik.handleSubmit}>
                     <div className="form-group row">
                         <div className="col-6">
@@ -297,9 +300,7 @@ const Register = () => {
                   <p>
                     Already a member? <a href="" onClick={()=>navigate('/login')}>Login here</a>
                   </p>
-                  {error && <div className="error_msg" style={{background:"red",color:"white"}}>{error}</div>}
-                      {msg && <div className="success_msg" style={{background:"green",color:"white"}}>{msg}</div>}
-                </div>
+                 </div>
               </div>
             </div>
           </div>

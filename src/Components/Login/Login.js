@@ -110,6 +110,9 @@ const Login = () => {
                   </div>
                   <h1>Welcome!</h1>
                   <h3>Sign Into Your Account</h3>
+                  {error && <div className="error_msg" style={{background:"red",color:"white"}}>{error}</div>}
+                      {msg && <div className="success_msg" style={{background:"green",color:"white"}}>{msg}</div>}
+                
                   <form>
                     <div className="row">
                     <div className="form-group col-4">
@@ -227,9 +230,7 @@ const Login = () => {
                       Register here
                     </a>
                   </p>
-                  {error && <div className="error_msg" style={{background:"red",color:"white"}}>{error}</div>}
-                      {msg && <div className="success_msg" style={{background:"green",color:"white"}}>{msg}</div>}
-                </div>
+                  </div>
               </div>
             </div>
           </div>
