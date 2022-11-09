@@ -7,12 +7,13 @@ import success from "../../image/success.png";
 
 const EmailVerify = () => {
   const param = useParams();
+  console.log(param)
   const navigate = useNavigate();
 
-  useEffect(() => {
+useEffect(() => {
     const verifyEmailUrl = async () => {
       try {
-        const url = `https://mms-server.herokuapp.com/api/auth/${param.id}/verify/${param.token}`;
+        const url = `https://mms-server.herokuapp.com/api/auth/${param.id}/verify/${param.token}/`;
         const { data } = await axios.get(url);
         console.log(data);
       } catch (error) {
@@ -27,13 +28,12 @@ const EmailVerify = () => {
     window.location.reload();
   };
 
-  return (
+return (
     <Fragment>
       <div className={styles.container}>
         <img src={success} alt="success_img" className={styles.success_img} />
         <h1>Email verified successfully</h1>
-
-        <button className={styles.green_btn} onClick={load}>
+        	<button className={styles.green_btn} onClick={load}>
           Login
         </button>
       </div>
