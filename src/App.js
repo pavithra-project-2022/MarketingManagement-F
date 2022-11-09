@@ -21,6 +21,7 @@ import EmployeeProfileEditComp from "./Components/EmployeeProfileEditComp/Employ
 import AdminEmployeeProfileLayout from "./Components/AdminEmployeeProfileLayout/AdminEmployeeProfileLayout";
 import EmployeeUsernameComp from "./Components/EmployeeUsernameComp/EmployeeUsernameComp";
 import EmailVerify from "./Components/EmailVerify";
+import PasswordReset from "./Components/PasswordReset";
 
 function App() {
   const { user } = useContext(AuthContext);
@@ -39,6 +40,8 @@ function App() {
         <Route path="/users/:id/verify/:token" element={<EmailVerify />} />
 
         <Route path="/forgotPassword" element={<ForgotPassword />} />
+        
+			  <Route path="/password-reset/:id/:token" element={<PasswordReset />} />
 
         <Route exact path="/" element={<Home />} />
 
