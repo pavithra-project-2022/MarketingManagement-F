@@ -120,7 +120,7 @@ const Login = () => {
                         htmlFor="email"
                         className="form-label float-start"
                       >
-                        Email/
+                        Email<span style={{color:"red"}}>*</span>/
                       </label>
                       <input
                         name="email"
@@ -137,7 +137,7 @@ const Login = () => {
                         htmlFor="mobile"
                         className="form-label float-start"
                       >
-                        Mobile/
+                        Mobile<span style={{color:"red"}}>*</span>/
                       </label>
                        <input
                         name="mobile"
@@ -154,7 +154,7 @@ const Login = () => {
                         htmlFor="username"
                         className="form-label float-start"
                      >
-                      Username
+                      Username<span style={{color:"red"}}>*</span>
                       </label>
                        <input
                         name="username"

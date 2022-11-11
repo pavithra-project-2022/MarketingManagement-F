@@ -12,12 +12,12 @@ const EmployeeProfile = () => {
   const { user } = useContext(AuthContext);
   const [credentials, setCredentials] = useState({
     empId: user.details.userId,
-    empFname: undefined,
-    empMname: undefined,
-    empLname: undefined,
-    email: undefined,
-    mobile: undefined,
-    pan: undefined,
+    empFname: "",
+    empMname: "",
+    empLname: "",
+    email: "",
+    mobile: "",
+    pan: "",
     createDate:todayDate+","+timeNow
   });
 
@@ -56,7 +56,7 @@ const EmployeeProfile = () => {
     }
     fetchData();
   }, []);
-
+console.log(userData)
   return (
     <div class="content">
       <div class="card">
@@ -98,8 +98,8 @@ const EmployeeProfile = () => {
                     required
                     class="form-control touchspin-postfix"
                     placeholder="Middle Name"
-                    value={userData.empMname}
-                    disabled={userData.empMname ? true : false}
+                    value={userData?.empMname}
+                    disabled={userData?.empMname ? true : false}
                   />
                 </div>
               </div>
@@ -116,8 +116,9 @@ const EmployeeProfile = () => {
                     class="form-control"
                     onChange={handleChange}
                     required
-                    value={user.details.userLname.toLowerCase().toUpperCase()}
-                    disabled={user.details.role==='user'}
+                    placeholder="Last Name"
+                    defaultValue={user.details.empLname ?user.details.empLname :userData.empLname}
+                    disabled={userData?.empLname ? true : false}
                   />
                 </div>
               </div>
@@ -128,14 +129,15 @@ const EmployeeProfile = () => {
                 </label>
                 <div class="col-lg-9">
                   <input
-                    type="tel"
+                    type="text"
                     id="mobile"
                     name="mobile"
                     class="form-control"
                     onChange={handleChange}
                     required
-                    value={user.details.mobile}
-                    disabled={user.details.role==='user'}
+                    placeholder="Mobile No"
+                    defaultValue={user.details.mobile ?user.details.mobile :userData.mobile}
+                    disabled={userData.mobile ? true :false}
                   />
                 </div>
               </div>
@@ -152,8 +154,9 @@ const EmployeeProfile = () => {
                     class="form-control"
                     onChange={handleChange}
                     required
+                    placeholder="Email ID"
                     value={user.details.email}
-                    disabled={user.details.role==='user'}
+                    disabled={userData?.email ? true : false}
                   />
                 </div>
               </div>
@@ -170,9 +173,9 @@ const EmployeeProfile = () => {
                     onChange={handleChange}
                     class="form-control"
                     required
-                    value={userData.pan}
+                    defaultValue={userData?.pan}
                     placeholder="Enter PAN Number"
-                    disabled={userData.pan ? true : false}
+                    disabled={userData?.pan ? true : false}
                   />
                 </div>
               </div>

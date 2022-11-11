@@ -23,8 +23,7 @@ const Register = () => {
     initialValues: {
       userFname: "",
       userLname: "",
-      email: "",
-      mobile: "",
+      emailOrPhone: "",
       password: "",
       confirmPassword: "",
       createDate:todayDate+","+timeNow,
@@ -34,12 +33,10 @@ const Register = () => {
       if (!values.userFname) {
         errors.userFname = "First Name should not be blank";
       }
-      if (!values.email) {
-        errors.email = "Email should not be blank";
+      if (!values.emailOrPhone) {
+        errors.emailOrPhone = "Email/Mobile No should not be blank";
       }
-      if (!values.mobile) {
-        errors.mobile = "Mobile No should not be blank";
-      }
+    
       if (!values.password) {
         errors.password = "Password should not be blank";
       }
@@ -123,7 +120,7 @@ const Register = () => {
                     <div className="form-group row">
                         <div className="col-6">
                       <label htmlFor="userFname" className="form-label float-start">
-                        First Name
+                        First Name<span style={{color:"red"}}>*</span>
                       </label>
                       <input
                         name="userFname"
@@ -159,33 +156,33 @@ const Register = () => {
                               ? "1px solid red"
                               : "",
                           }}
-                        required
+                       
                       />
                       </div>
                     </div>
                     <div className="form-group row">
-                    <div className="col-6">
+                    <div className="col-12">
                       <label htmlFor="email" className="form-label float-start">
-                        Email
+                        Email/Mobile No<span style={{color:"red"}}>*</span>
                       </label>
                       <input
-                        name="email"
-                        type="email"
+                        name="emailOrPhone"
+                        type="text"
                         className="form-control"
-                        id="email"
-                        placeholder="Email ID"
-                        aria-label="Email ID"
+                        id="emailOrPhone"
+                        placeholder="Email ID/Mobile No"
+                        aria-label="Email ID/Mobile No"
                         onChange={formik.handleChange}
-                          value={formik.values.email}
+                          value={formik.values.emailOrPhone}
                           style={{
-                            border: formik.errors.email
+                            border: formik.errors.emailOrPhone
                               ? "1px solid red"
                               : "",
                           }}
                         required
                       />
                       </div>
-                      <div className="col-6">
+                      {/* <div className="col-6">
                       <label htmlFor="mobile" className="form-label float-start">
                         Mobile No
                       </label>
@@ -205,12 +202,12 @@ const Register = () => {
                           }}
                         required
                       />
-                      </div>
+                      </div> */}
                     </div>
                     <div className="form-group clearfix row">
                     <div className="col-6">
                       <label htmlFor="password" className="form-label float-start">
-                        Password
+                        Password<span style={{color:"red"}}>*</span>
                       </label>
                       <input
                         name="password"
@@ -242,7 +239,7 @@ const Register = () => {
                       </div>
                       <div className="col-6">
                       <label htmlFor="confirmPassword" className="form-label float-start">
-                        Confirm Password
+                        Confirm Password<span style={{color:"red"}}>*</span>
                       </label>
                       <input
                         name="confirmPassword"
