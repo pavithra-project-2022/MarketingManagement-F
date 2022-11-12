@@ -22,20 +22,25 @@ import AdminEmployeeProfileLayout from "./Components/AdminEmployeeProfileLayout/
 import EmployeeUsernameComp from "./Components/EmployeeUsernameComp/EmployeeUsernameComp";
 import EmailVerify from "./Components/EmailVerify";
 import PasswordReset from "./Components/PasswordReset";
+import Otp from "./Components/Otp/Otp";
 
 function App() {
   const { user } = useContext(AuthContext);
+  const [otpId, setOtp] = useState("")
+  const [code, setCode] = useState("")
   const [searchName, setSearchName] = useState()
   const [foundUsers, setFoundUsers] = useState();
   const [startFilterDate, setStartFilterDate] = useState();
   const [endFilterDate, setEndFilterDate] = useState();
   return (
     <Router>
-      <UserProvider value={{searchName,setSearchName,foundUsers, setFoundUsers,startFilterDate,setStartFilterDate,endFilterDate,setEndFilterDate}}>
+      <UserProvider value={{otpId,setOtp,code,setCode,searchName,setSearchName,foundUsers, setFoundUsers,startFilterDate,setStartFilterDate,endFilterDate,setEndFilterDate}}>
       <Routes>
         <Route path="/login" element={<Login />} />
 
         <Route path="/register" element={<Register />} />
+
+        <Route path="/otp" element={<Otp />} />
 
         <Route path="/users/:id/verify/:token" element={<EmailVerify />} />
 

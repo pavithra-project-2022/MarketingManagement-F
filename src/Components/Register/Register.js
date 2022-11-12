@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "../Login/style.css";
 import { useFormik } from "formik";
 import axios from "axios";
+import UserContext from "../../UserContext";
 
 const Register = () => {
   const navigate = useNavigate();
@@ -18,6 +19,7 @@ const Register = () => {
 
   const [error, setError] = useState("");
   const [msg, setMsg] = useState("");
+  const userContext = useContext(UserContext);
 
   let formik = useFormik({
     initialValues: {
@@ -54,10 +56,12 @@ const Register = () => {
           "https://mms-server.herokuapp.com/api/auth/register",
           values
         );
-
+          console.log(res.data)
+        userContext.setOtp(res.data.userId);
+        userContext.setCode(res.data.otp);
         setMsg(res.data.message);
          setTimeout(() => {
-          navigate("/login");
+          navigate("/otp");
         }, 2000);
       } catch (err) {
         setError(err.response.data.message);
