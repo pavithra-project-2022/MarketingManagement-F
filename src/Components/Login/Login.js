@@ -11,11 +11,11 @@ import axios from "axios";
 
 const Login = () => {
   const navigate = useNavigate();
-  const [email, setEmail] = useState("");
-  const [mobile, setMobile] = useState("");
-  const [username, setUsername] = useState("");
+  const [user, setUser] = useState("");
   const [password, setPassword] = useState("");
   const { dispatch } = useContext(AuthContext);
+
+
 
   const [error, setError] = useState("");
   const [msg, setMsg] = useState("");
@@ -31,9 +31,7 @@ const Login = () => {
     dispatch(loginStart());
     try {
       const res = await axios.post("https://mms-server.herokuapp.com/api/auth/login", {
-        email,
-        mobile,
-        username,
+        user,
         password,
       });
       dispatch(loginSuccess(res.data));
@@ -115,14 +113,23 @@ const Login = () => {
                 
                   <form>
                     <div className="row">
-                    <div className="form-group col-4">
+                    <div className="form-group col-12">
                       <label
-                        htmlFor="email"
+                        htmlFor="user"
                         className="form-label float-start"
                       >
-                        Email<span style={{color:"red"}}>*</span>/
+                        Email/Mobile No/Username<span style={{color:"red"}}>*</span>
                       </label>
                       <input
+                        id="user"
+                        type="text"
+                        name="user"
+                        className="form-control"
+                        onChange={(e) => setUser(e.target.value)}
+                        placeholder="Email/Mobile no/Username"
+                        aria-label="Email/Mobile no/Username"
+                      />
+                      {/* <input
                         name="email"
                         type="email"
                         className="form-control"
@@ -164,8 +171,8 @@ const Login = () => {
                         onChange={(e) => setUsername(e.target.value)}
                         placeholder="Username"
                         aria-label="Username"
-                      />
-                    </div> 
+                      />*/}
+                    </div>  
                     </div>
                     <div className="form-group clearfix">
                       <label
